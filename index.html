@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-<input type="text">
-<button onclick="clima()">Mostrar la Temperatura</button>
 
-<script src="index.js"></script>
+<body>
+    <div id="chart-container" style="width: 600px; height: 400px">
+        <canvas id="chart"></canvas>
+    </div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <div id="chart2-container" style="width: 800px; height: 600px">
+        <canvas id="chart2"></canvas>
+    </div>
+    <script src="index.js"></script>
+    <script src="index2.js"></script>
 </body>
+
 </html>

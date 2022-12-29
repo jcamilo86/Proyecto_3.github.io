@@ -1,0 +1,20 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#chart-container {
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+    background-color: lightblue;
+}
+
+#chart2-container {
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    background-color: lightpink;
+
+}
