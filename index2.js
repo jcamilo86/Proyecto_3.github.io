@@ -1,11 +1,6 @@
-
-// JavaScript file
-
-
-
-async function getData() {
-    //  API  URL
-    const API_ENDPOINT = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=mxn&order=market_cap_desc&per_page=100&page=1&sparkline=false";
+async function getData2() {
+    // Set the API endpoint URL
+    const API_ENDPOINT = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false";
 
     // Send a GET request to the API endpoint
     const response = await fetch(API_ENDPOINT);
@@ -18,25 +13,24 @@ async function getData() {
 
 // Function to create the chart
 
-async function createChart() {
+async function createChart2() {
     // Get the data from the API
-    const data = await getData();
+    const data = await getData2();
 
     // Get the labels (x-axis) and data (y-axis) for the chart
-    const labels = data.map((coin) => coin.name);
-    const chartData = data.map((coin) => coin.current_price);
+    const labels2 = data.map((coin) => coin.name);
+    const chartData2 = data.map((coin) => coin.current_price);
 
     // Create the chart
-    const ctx = document.getElementById("chart");
-    const chart = new Chart(ctx, {
-        type: "line",
+    const ctx = document.getElementById("chart2");
+    const charts = new Chart(ctx, {
+        type: "doughnut",
         data: {
-            labels: labels,
+            labels: labels2,
             datasets: [
-
                 {
-                    label: "Cryptocurrency Price (MXN)",
-                    data: chartData,
+                    label: "Cryptocurrency Price (USD)",
+                    data: chartData2,
                     backgroundColor: [
                         'rgb(54, 162, 235)',
                         'rgb(255, 205, 86)',
@@ -150,4 +144,5 @@ async function createChart() {
 }
 
 // Call the createChart function when the page loads
-createChart();
+createChart2();
+
